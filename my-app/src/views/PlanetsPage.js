@@ -1,9 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 export default function PlanetsPage() {
-  const navigate = useNavigate();
   const [planet, setPlanet] = useState([]);
   const [count, setCount] = useState("");
   const [page, setPage] = useState(1);
@@ -18,7 +16,7 @@ export default function PlanetsPage() {
         method: "get",
         url: `https://swapi.dev/api/planets/?page=${page}`,
       });
-      console.log(data);
+
       setPlanet(data.results);
       setCount(data.count);
     } catch (error) {

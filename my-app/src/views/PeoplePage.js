@@ -18,7 +18,7 @@ export default function PeoplePage() {
         method: "get",
         url: `https://swapi.dev/api/people/?page=${page}`,
       });
-      console.log(data);
+
       setPeople(data.results);
       setCount(data.count);
     } catch (error) {

@@ -16,7 +16,7 @@ export default function FilmPage() {
         method: "get",
         url: `https://swapi.dev/api/films/`,
       });
-      console.log(data.results);
+
       setFilm(data.results);
     } catch (error) {
       console.log(error);

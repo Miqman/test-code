@@ -24,7 +24,7 @@ export default function DetailPage() {
         method: "get",
         url: `https://swapi.dev/api/people/${id}`,
       });
-      console.log(data);
+
       setPerson(data);
       setFilm(data.films.length);
       setLinkhome(data.homeworld);
